@@ -1,67 +1,82 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #003366, #004080);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
   padding: 40px;
+  animation: fadeIn 1s ease-in;
+  color: #ffffff;
 }
- 
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .card-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
+  animation: fadeIn 1.2s ease-in;
 }
- 
+
 .dashboard-card {
-  background-color: white;
-  border: 2px solid #003366;
-  border-radius: 10px;
+  background-color: #ffffffee;
+  border: 2px solid #00509e;
+  border-radius: 16px;
   padding: 25px 30px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   min-width: 280px;
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
- 
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
 .card-title {
-  font-size: 14px;
+  font-size: 15px;
   color: #003366;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
- 
+
 .card-value {
-  font-size: 36px;
-  color: #003366;
+  font-size: 38px;
+  color: #002244;
   font-weight: bold;
 }
- 
+
 .wide-card {
   width: 700px;
 }
- 
+
 .chart-card {
   width: 300px;
 }
- 
+
 .chart-container {
   position: relative;
   width: 250px;
   height: 250px;
   margin: 0 auto;
 }
- 
+
 #feederChart {
   position: relative;
   z-index: 1;
 }
- 
+
 .chart-center {
   position: absolute;
   top: 52%;
@@ -74,22 +89,22 @@ body {
   pointer-events: none;
   text-shadow: 1px 1px 2px black;
 }
- 
+
 .line-summary {
   margin-top: 10px;
   font-size: 16px;
   text-align: left;
 }
- 
+
 .line-summary strong {
   color: #003366;
 }
- 
+
 .line-summary span {
   font-weight: bold;
-  color: #0077b6;
+  color: #00b4d8;
 }
- 
+
 #stationSelector {
   margin-bottom: 20px;
   padding: 6px 12px;
@@ -97,26 +112,26 @@ body {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
- 
-/* Estilo para tarjeta DEVICE TRANSACTIONS */
+
 .device-card {
   width: 350px;
   text-align: left;
 }
- 
+
 .device-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 10px;
+  animation: fadeIn 1s ease-in;
 }
- 
+
 .device-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
- 
+
 .device-name {
   display: flex;
   align-items: center;
@@ -124,7 +139,7 @@ body {
   font-size: 14px;
   gap: 5px;
 }
- 
+
 .device-bar-container {
   flex: 1;
   height: 12px;
@@ -133,13 +148,14 @@ body {
   border-radius: 4px;
   overflow: hidden;
 }
- 
+
 .device-bar {
   height: 100%;
-  background-color: #0077b6;
+  background-color: #00b4d8;
   border-radius: 4px;
+  transition: width 0.5s ease-in-out;
 }
- 
+
 .device-value {
   width: 60px;
   text-align: right;
