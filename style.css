@@ -1,99 +1,67 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #0b2a6b;
+  background-color: #f0f4f8;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-direction: column;
+  padding: 40px;
 }
-
-.navbar {
-  width: 100%;
-  background-color: #002366;
-  padding: 15px 25px;
-  color: white;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.navbar-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.main-title {
-  text-align: center;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-.main-title h2 {
-  color: white;
-  font-size: 24px;
-  font-weight: 500;
-}
-
+ 
 .card-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
-  max-width: 1200px;
-  width: 100%;
 }
-
+ 
 .dashboard-card {
   background-color: white;
-  border: 2px solid #002366;
+  border: 2px solid #003366;
   border-radius: 10px;
   padding: 25px 30px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  flex: 1 1 300px;
-  max-width: 100%;
-  box-sizing: border-box;
+  min-width: 280px;
+  position: relative;
 }
-
+ 
 .card-title {
   font-size: 14px;
-  color: #002366;
+  color: #003366;
   font-weight: bold;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-
+ 
 .card-value {
   font-size: 36px;
-  color: #002366;
+  color: #003366;
   font-weight: bold;
 }
-
+ 
 .wide-card {
-  flex: 1 1 700px;
+  width: 700px;
 }
-
+ 
 .chart-card {
-  flex: 1 1 300px;
+  width: 300px;
 }
-
+ 
 .chart-container {
   position: relative;
   width: 250px;
   height: 250px;
   margin: 0 auto;
 }
-
+ 
 #feederChart {
   position: relative;
   z-index: 1;
 }
-
+ 
 .chart-center {
   position: absolute;
   top: 52%;
@@ -106,22 +74,22 @@ body {
   pointer-events: none;
   text-shadow: 1px 1px 2px black;
 }
-
+ 
 .line-summary {
   margin-top: 10px;
   font-size: 16px;
   text-align: left;
 }
-
+ 
 .line-summary strong {
-  color: #002366;
+  color: #003366;
 }
-
+ 
 .line-summary span {
   font-weight: bold;
-  color: #0099ff;
+  color: #0077b6;
 }
-
+ 
 #stationSelector {
   margin-bottom: 20px;
   padding: 6px 12px;
@@ -129,25 +97,26 @@ body {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
-
+ 
+/* Estilo para tarjeta DEVICE TRANSACTIONS */
 .device-card {
-  flex: 1 1 350px;
+  width: 350px;
   text-align: left;
 }
-
+ 
 .device-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 10px;
 }
-
+ 
 .device-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
+ 
 .device-name {
   display: flex;
   align-items: center;
@@ -155,7 +124,7 @@ body {
   font-size: 14px;
   gap: 5px;
 }
-
+ 
 .device-bar-container {
   flex: 1;
   height: 12px;
@@ -164,48 +133,16 @@ body {
   border-radius: 4px;
   overflow: hidden;
 }
-
+ 
 .device-bar {
   height: 100%;
   background-color: #0077b6;
   border-radius: 4px;
 }
-
+ 
 .device-value {
   width: 60px;
   text-align: right;
   font-weight: bold;
   color: #003366;
-}
-
-.footer {
-  text-align: center;
-  padding: 15px 0;
-  color: #cfd8dc;
-  font-size: 13px;
-  margin-top: 40px;
-}
-
-@media screen and (max-width: 768px) {
-  .dashboard-card,
-  .wide-card,
-  .chart-card {
-    width: 100% !important;
-    flex: 1 1 100%;
-  }
-
-  .card-grid {
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .chart-container {
-    width: 100% !important;
-    height: auto;
-  }
-
-  canvas {
-    width: 100% !important;
-    height: auto !important;
-  }
 }
