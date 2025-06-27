@@ -10,13 +10,13 @@
 <body>
 
   <!-- NAVBAR -->
-  <header style="width: 100%; background-color: #002366; padding: 10px 20px; color: white;">
-    <h1 style="margin: 0; font-size: 20px;">🚍 SISTEMA DE TRANSPORTE - DASHBOARD</h1>
+  <header class="navbar">
+    <span class="navbar-title">🚍 Sistema de Transporte – Dashboard</span>
   </header>
 
   <!-- TÍTULO PRINCIPAL -->
-  <section style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
-    <h2 style="color: white; font-size: 28px;">Visualización de Transacciones y Rutas</h2>
+  <section class="main-title">
+    <h2>Visualización de Transacciones y Rutas</h2>
   </section>
 
   <!-- GRID DE TARJETAS -->
@@ -62,4 +62,18 @@
     </div>
 
     <!-- DEVICE TRANSACTIONS -->
-    <div class
+    <div class="dashboard-card device-card">
+      <div class="card-title">DEVICE TRANSACTIONS</div>
+      <div id="deviceList" class="device-list"></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    Desarrollado por josalf | © 2025
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

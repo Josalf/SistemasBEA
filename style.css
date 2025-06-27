@@ -1,13 +1,41 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #003399; /* Azul rey */
+  background-color: #0b2a6b;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
+  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #002366;
+  padding: 15px 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main-title {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.main-title h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .card-grid {
@@ -102,7 +130,6 @@ body {
   border: 1px solid #ccc;
 }
 
-/* DEVICE TRANSACTIONS */
 .device-card {
   flex: 1 1 350px;
   text-align: left;
@@ -151,7 +178,14 @@ body {
   color: #003366;
 }
 
-/* 🔁 RESPONSIVE */
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #cfd8dc;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
 @media screen and (max-width: 768px) {
   .dashboard-card,
   .wide-card,
