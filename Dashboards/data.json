@@ -1,0 +1,56 @@
+{
+  "totalTransactions": 351729,
+ 
+  "feederBusRoutes": {
+    "Route A": 9,
+    "Route B": 7,
+    "Route C": 4,
+    "Route D": 3,
+    "Route E": 2
+  },
+ 
+  "transactionsByType": {
+    "Tlaquepaque Centro": { "entrada": 10, "salida": 12, "recarga": 8, "venta": 5 },
+    "CUTLAQ": { "entrada": 11, "salida": 13, "recarga": 9, "venta": 6 },
+    "Lomas del Sur": { "entrada": 12, "salida": 14, "recarga": 10, "venta": 7 },
+    "El Cuervo": { "entrada": 9, "salida": 10, "recarga": 7, "venta": 6 },
+    "Las Pintas": { "entrada": 14, "salida": 15, "recarga": 12, "venta": 9 }
+  },
+ 
+  "entriesVsRecharges": {
+    "labels": ["Tlaquepaque Centro", "CUTLAQ", "Lomas del Sur", "El Cuervo", "Las Pintas"],
+    "stations": {
+      "entries": [120, 135, 160, 145, 180],
+      "recharges": [80, 90, 95, 85, 100]
+    },
+    "buses": {
+      "entries": [110, 130, 150, 140, 170],
+      "recharges": [70, 85, 90, 80, 95]
+    }
+  },
+ 
+  "entriesRecargasPerStationPerDay": {
+    "dates": ["2025-04-17", "2025-04-18", "2025-04-19", "2025-04-20", "2025-04-21", "2025-04-22", "2025-04-23"],
+    "stations": {
+      "Tlaquepaque Centro": {
+        "entries": [350, 420, 390, 410, 370, 430, 400],
+        "recharges": [210, 215, 220, 225, 230, 240, 245]
+      },
+      "CUTLAQ": {
+        "entries": [300, 310, 330, 360, 340, 325, 310],
+        "recharges": [150, 160, 170, 175, 180, 185, 190]
+      },
+      "Lomas del Sur": {
+        "entries": [200, 210, 230, 240, 250, 260, 270],
+        "recharges": [120, 125, 130, 135, 140, 145, 150]
+      }
+    }
+  },
+ 
+  "deviceTransactions": {
+    "Entries": 145307,
+    "Exits": 128947,
+    "Gates": 26463,
+    "Ticket Machines": 51012
+  }
+}
