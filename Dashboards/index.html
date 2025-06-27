@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dashboard Prototipo</title>
-<link rel="stylesheet" href="style.css" />
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Prototipo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<div class="card-grid">
- 
+
+  <!-- NAVBAR -->
+  <header style="width: 100%; background-color: #002366; padding: 10px 20px; color: white;">
+    <h1 style="margin: 0; font-size: 20px;">🚍 SISTEMA DE TRANSPORTE - DASHBOARD</h1>
+  </header>
+
+  <!-- TÍTULO PRINCIPAL -->
+  <section style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
+    <h2 style="color: white; font-size: 28px;">Visualización de Transacciones y Rutas</h2>
+  </section>
+
+  <!-- GRID DE TARJETAS -->
+  <div class="card-grid">
+
     <!-- ENTRIES VS RECHARGES -->
-<div class="dashboard-card wide-card">
-<div class="card-title">ENTRIES VS. RECHARGES</div>
-<canvas id="lineChart" width="700" height="300"></canvas>
-<div class="line-summary">
-<p><strong>Stations + Buses Entries:</strong> <span id="totalEntries">0</span></p>
-<p><strong>Stations + Buses Recharges:</strong> <span id="totalRecharges">0</span></p>
-</div>
-</div>
- 
+    <div class="dashboard-card wide-card">
+      <div class="card-title">ENTRIES VS. RECHARGES</div>
+      <canvas id="lineChart" width="700" height="300"></canvas>
+      <div class="line-summary">
+        <p><strong>Stations + Buses Entries:</strong> <span id="totalEntries">0</span></p>
+        <p><strong>Stations + Buses Recharges:</strong> <span id="totalRecharges">0</span></p>
+      </div>
+    </div>
+
     <!-- TOTAL STATION TRANSACTIONS -->
-<div class="dashboard-card">
-<div class="card-title">TOTAL STATION TRANSACTIONS</div>
-<div class="card-value" id="transactionCount">Loading...</div>
-</div>
- 
-    <!-- FEEDER BUS ROUTES (PASTEL) -->
-<div class="dashboard-card chart-card">
-<div class="card-title">FEEDER BUS ROUTES</div>
-<div class="chart-container">
-<canvas id="feederChart" width="250" height="250"></canvas>
-<div class="chart-center" id="feederTotal">0</div>
-</div>
-</div>
- 
+    <div class="dashboard-card">
+      <div class="card-title">TOTAL STATION TRANSACTIONS</div>
+      <div class="card-value" id="transactionCount">Loading...</div>
+    </div>
+
+    <!-- FEEDER BUS ROUTES -->
+    <div class="dashboard-card chart-card">
+      <div class="card-title">FEEDER BUS ROUTES</div>
+      <div class="chart-container">
+        <canvas id="feederChart" width="250" height="250"></canvas>
+        <div class="chart-center" id="feederTotal">0</div>
+      </div>
+    </div>
+
     <!-- TRANSACTIONS BY TYPE -->
-<div class="dashboard-card wide-card">
-<div class="card-title">TRANSACTIONS BY TYPE</div>
-<canvas id="stackedBarChart" width="600" height="300"></canvas>
-</div>
- 
-    <!-- NUEVO: ENTRANCES + RECHARGES POR ESTACIÓN -->
-<div class="dashboard-card wide-card">
-<div class="card-title">ENTRANCES BY STATION</div>
-<label for="stationSelector">Select Station:</label>
-<select id="stationSelector"></select>
-<canvas id="stationLineChart" width="700" height="300"></canvas>
-</div>
- 
+    <div class="dashboard-card wide-card">
+      <div class="card-title">TRANSACTIONS BY TYPE</div>
+      <canvas id="stackedBarChart" width="600" height="300"></canvas>
+    </div>
+
+    <!-- ENTRANCES BY STATION -->
+    <div class="dashboard-card wide-card">
+      <div class="card-title">ENTRANCES BY STATION</div>
+      <label for="stationSelector">Select Station:</label>
+      <select id="stationSelector"></select>
+      <canvas id="stationLineChart" width="700" height="300"></canvas>
+    </div>
+
     <!-- DEVICE TRANSACTIONS -->
-<div class="dashboard-card device-card">
-<div class="card-title">DEVICE TRANSACTIONS</div>
-<div id="deviceList" class="device-list"></div>
-</div>
- 
-  </div>
- 
-  <script src="script.js"></script>
-</body>
-</html>
+    <div class

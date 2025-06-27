@@ -1,67 +1,71 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
+  background-color: #003399; /* Azul rey */
   display: flex;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 40px;
+  padding: 20px;
+  box-sizing: border-box;
 }
- 
+
 .card-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
 }
- 
+
 .dashboard-card {
   background-color: white;
-  border: 2px solid #003366;
+  border: 2px solid #002366;
   border-radius: 10px;
   padding: 25px 30px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  min-width: 280px;
-  position: relative;
+  flex: 1 1 300px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
- 
+
 .card-title {
   font-size: 14px;
-  color: #003366;
+  color: #002366;
   font-weight: bold;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
- 
+
 .card-value {
   font-size: 36px;
-  color: #003366;
+  color: #002366;
   font-weight: bold;
 }
- 
+
 .wide-card {
-  width: 700px;
+  flex: 1 1 700px;
 }
- 
+
 .chart-card {
-  width: 300px;
+  flex: 1 1 300px;
 }
- 
+
 .chart-container {
   position: relative;
   width: 250px;
   height: 250px;
   margin: 0 auto;
 }
- 
+
 #feederChart {
   position: relative;
   z-index: 1;
 }
- 
+
 .chart-center {
   position: absolute;
   top: 52%;
@@ -74,22 +78,22 @@ body {
   pointer-events: none;
   text-shadow: 1px 1px 2px black;
 }
- 
+
 .line-summary {
   margin-top: 10px;
   font-size: 16px;
   text-align: left;
 }
- 
+
 .line-summary strong {
-  color: #003366;
+  color: #002366;
 }
- 
+
 .line-summary span {
   font-weight: bold;
-  color: #0077b6;
+  color: #0099ff;
 }
- 
+
 #stationSelector {
   margin-bottom: 20px;
   padding: 6px 12px;
@@ -97,26 +101,26 @@ body {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
- 
-/* Estilo para tarjeta DEVICE TRANSACTIONS */
+
+/* DEVICE TRANSACTIONS */
 .device-card {
-  width: 350px;
+  flex: 1 1 350px;
   text-align: left;
 }
- 
+
 .device-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 10px;
 }
- 
+
 .device-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
- 
+
 .device-name {
   display: flex;
   align-items: center;
@@ -124,7 +128,7 @@ body {
   font-size: 14px;
   gap: 5px;
 }
- 
+
 .device-bar-container {
   flex: 1;
   height: 12px;
@@ -133,16 +137,41 @@ body {
   border-radius: 4px;
   overflow: hidden;
 }
- 
+
 .device-bar {
   height: 100%;
   background-color: #0077b6;
   border-radius: 4px;
 }
- 
+
 .device-value {
   width: 60px;
   text-align: right;
   font-weight: bold;
   color: #003366;
+}
+
+/* 🔁 RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .dashboard-card,
+  .wide-card,
+  .chart-card {
+    width: 100% !important;
+    flex: 1 1 100%;
+  }
+
+  .card-grid {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .chart-container {
+    width: 100% !important;
+    height: auto;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
