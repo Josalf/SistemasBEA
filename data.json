@@ -48,9 +48,9 @@
   },
  
   "deviceTransactions": {
-    "Entries": 145307,
-    "Exits": 128947,
-    "Gates": 26463,
-    "Ticket Machines": 51012
+    "🛂 Entradas": 145307,
+    "🚶‍♂️ Salidas": 128947,
+    "🚧 Puertas": 26463,
+    "🎫 Maquinas Tickets": 51012
   }
 }

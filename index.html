@@ -15,20 +15,20 @@
 <div class="card-title">ENTRIES VS. RECHARGES</div>
 <canvas id="lineChart" width="700" height="300"></canvas>
 <div class="line-summary">
-<p><strong>Stations + Buses Entries:</strong> <span id="totalEntries">0</span></p>
-<p><strong>Stations + Buses Recharges:</strong> <span id="totalRecharges">0</span></p>
+<p><strong>Estaciones + Entradas Autobuses:</strong> <span id="totalEntries">0</span></p>
+<p><strong>Estaciones + Recargas Autobuses:</strong> <span id="totalRecharges">0</span></p>
 </div>
 </div>
  
     <!-- TOTAL STATION TRANSACTIONS -->
 <div class="dashboard-card">
-<div class="card-title">TOTAL STATION TRANSACTIONS</div>
-<div class="card-value" id="transactionCount">Loading...</div>
+<div class="card-title">Total Autobuses Transacciones</div>
+<div class="card-value" id="transactionCount">Cargando...</div>
 </div>
  
     <!-- FEEDER BUS ROUTES (PASTEL) -->
 <div class="dashboard-card chart-card">
-<div class="card-title">FEEDER BUS ROUTES</div>
+<div class="card-title">Cantidad Ruta Autobuses</div>
 <div class="chart-container">
 <canvas id="feederChart" width="250" height="250"></canvas>
 <div class="chart-center" id="feederTotal">0</div>
@@ -37,21 +37,21 @@
  
     <!-- TRANSACTIONS BY TYPE -->
 <div class="dashboard-card wide-card">
-<div class="card-title">TRANSACTIONS BY TYPE</div>
+<div class="card-title">Transacciones por Tipo</div>
 <canvas id="stackedBarChart" width="600" height="300"></canvas>
 </div>
  
     <!-- NUEVO: ENTRANCES + RECHARGES POR ESTACIÓN -->
 <div class="dashboard-card wide-card">
-<div class="card-title">ENTRANCES BY STATION</div>
-<label for="stationSelector">Select Station:</label>
+<div class="card-title">Entradas por estación</div>
+<label for="stationSelector">Seleccionar estación</label>
 <select id="stationSelector"></select>
 <canvas id="stationLineChart" width="700" height="300"></canvas>
 </div>
  
     <!-- DEVICE TRANSACTIONS -->
 <div class="dashboard-card device-card">
-<div class="card-title">DEVICE TRANSACTIONS</div>
+<div class="card-title">Transacciones Dispositivos Total</div>
 <div id="deviceList" class="device-list"></div>
 </div>
  

@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const traduccionesDispositivos = {
+  "Entries": "Entradas",
+  "Exits": "Salidas",
+  "Gates": "Torniquetes",
+  "Ticket Machines": "Máquinas"
+};
+
   fetch("data.json")
     .then((response) => {
       if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
       return response.json();
     })
+    
     .then((data) => {
       // === TRANSACTIONS BY TYPE ===
       const typeData = data.transactionsByType;
@@ -219,7 +227,8 @@ document.addEventListener("DOMContentLoaded", () => {
         row.className = "device-row";
  
         row.innerHTML = `
-<div class="device-name">${icons[name] || "🔹"} ${name}</div>
+<div class="device-name">${traduccionesDispositivos[name] || name}</div>
+
 <div class="device-bar-container">
 <div class="device-bar" style="width: ${percent}%"></div>
 </div>
