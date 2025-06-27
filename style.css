@@ -1,3 +1,4 @@
+/* === BASE === */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,10 +8,10 @@ body {
   align-items: flex-start;
   min-height: 100vh;
   padding: 40px;
-  animation: fadeIn 1s ease-in;
-  color: #ffffff;
+  color: #000;
 }
 
+/* === ANIMACIÓN SUAVE AL CARGAR === */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -22,41 +23,45 @@ body {
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
-  animation: fadeIn 1.2s ease-in;
+  animation: fadeIn 1s ease-in;
 }
 
+/* === TARJETAS === */
 .dashboard-card {
-  background-color: #ffffffee;
-  border: 2px solid #00509e;
-  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
   padding: 25px 30px;
   text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   min-width: 280px;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dashboard-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* === TÍTULOS DE TARJETA === */
 .card-title {
   font-size: 15px;
   color: #003366;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
 }
 
+/* === VALOR CENTRAL === */
 .card-value {
-  font-size: 38px;
-  color: #002244;
+  font-size: 36px;
+  color: #111;
   font-weight: bold;
 }
 
+/* === DIFERENTES ANCHOS === */
 .wide-card {
   width: 700px;
 }
@@ -65,6 +70,7 @@ body {
   width: 300px;
 }
 
+/* === GRÁFICAS DE PASTEL === */
 .chart-container {
   position: relative;
   width: 250px;
@@ -83,13 +89,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 22px;
-  color: white;
+  color: #003366;
   font-weight: bold;
   z-index: 2;
   pointer-events: none;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px #fff;
 }
 
+/* === RESUMEN DE ENTRADAS Y RECARGAS === */
 .line-summary {
   margin-top: 10px;
   font-size: 16px;
@@ -102,17 +109,21 @@ body {
 
 .line-summary span {
   font-weight: bold;
-  color: #00b4d8;
+  color: #0077b6;
 }
 
+/* === SELECTOR DE ESTACIÓN === */
 #stationSelector {
   margin-bottom: 20px;
   padding: 6px 12px;
   font-size: 14px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  background-color: #fff;
+  color: #003366;
 }
 
+/* === TARJETA DE DISPOSITIVOS === */
 .device-card {
   width: 350px;
   text-align: left;
@@ -123,7 +134,6 @@ body {
   flex-direction: column;
   gap: 12px;
   margin-top: 10px;
-  animation: fadeIn 1s ease-in;
 }
 
 .device-row {
@@ -138,12 +148,13 @@ body {
   width: 110px;
   font-size: 14px;
   gap: 5px;
+  color: #003366;
 }
 
 .device-bar-container {
   flex: 1;
   height: 12px;
-  background-color: #d0e6f7;
+  background-color: #e1ecf4;
   margin: 0 10px;
   border-radius: 4px;
   overflow: hidden;
@@ -153,7 +164,7 @@ body {
   height: 100%;
   background-color: #00b4d8;
   border-radius: 4px;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 
 .device-value {
